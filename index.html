@@ -25,7 +25,7 @@
   <meta name="twitter:image" content="https://ctrlcap.co/assets/og-image.png" />
 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/styles.css" />
 
   <script type="application/ld+json">
@@ -124,20 +124,38 @@
     <!-- ============ HERO ============ -->
     <section class="hero">
       <div class="wrap">
-        <span class="kicker">Monday.com systems for private lenders</span>
-        <h1>Spreadsheets Out.  <span class="grad">Scale In.</span></h1>
-        <p class="lede">
-          Construction draw tracking, loan pipelines, and servicing workflows, rebuilt on
-          Monday.com and wired into the systems you already run.  Fixed scope.  Ninety days.
-          Your team owns it at handoff.
-        </p>
-        <div class="btn-row">
-          <a class="btn btn-primary" href="#contact">Start a conversation</a>
-          <a class="btn btn-ghost" href="#demo">Watch a build run</a>
+        <div class="hero-copy">
+          <span class="kicker">Monday.com systems for private lenders</span>
+          <h1>Spreadsheets Out.  <span class="grad">Scale In.</span></h1>
+          <p class="lede">
+            Construction draw tracking, loan pipelines, and servicing workflows, rebuilt on
+            Monday.com and wired into the systems you already run.  Fixed scope.  Ninety days.
+            Your team owns it at handoff.
+          </p>
+          <div class="btn-row">
+            <a class="btn btn-primary" href="#contact">Start a conversation</a>
+            <a class="btn btn-ghost" href="#demo">Watch a build run</a>
+          </div>
+          <p class="hero-note">
+            Monday.com Certified Partner<span class="dot">&middot;</span>Engagements start at <strong>$15,000</strong><span class="dot">&middot;</span>Phoenix, AZ
+          </p>
         </div>
-        <p class="hero-note">
-          Monday.com Certified Partner  ·  Engagements start at <strong>$15,000</strong>  ·  Phoenix, AZ
-        </p>
+
+        <div class="hero-visual" aria-hidden="true">
+          <div class="board">
+            <div class="board-head">
+              <span class="board-title"><i></i>Draw Management <small>&middot; Q3 pipeline</small></span>
+              <span class="board-live"><i></i>Live</span>
+            </div>
+            <div class="board-cols"><span>Draw</span><span>Borrower</span><span>Stage</span><span>Amount</span><span>Age</span></div>
+            <div class="board-row"><b>#0417-3</b><span class="who"><i></i>Ridgeline Homes</span><span class="pill pill-disb">Disbursed</span><span class="amt">$184,200</span><span class="age">&#10003;</span></div>
+            <div class="board-row runner"><b>#0422-2</b><span class="who"><i></i>Sonoran Build Co</span><span class="pill pill-insp"></span><span class="amt">$96,750</span><span class="age hot"></span></div>
+            <div class="board-row"><b>#0419-5</b><span class="who"><i></i>Mesa Verde Partners</span><span class="pill pill-fc">Fund control</span><span class="amt">$212,000</span><span class="age">1d</span></div>
+            <div class="board-row"><b>#0424-1</b><span class="who"><i></i>Copper State Capital</span><span class="pill pill-insp">Inspection</span><span class="amt">$58,400</span><span class="age">4h</span></div>
+            <div class="board-row"><b>#0420-4</b><span class="who"><i></i>Desert Sky Ventures</span><span class="pill pill-appr">Approved</span><span class="amt">$141,900</span><span class="age">6h</span></div>
+            <div class="board-toast"><i></i></div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -475,7 +493,7 @@
         </div>
 
         <div class="contact-grid">
-          <div>
+          <div class="lead-panel">
             <form class="lead" id="lead-form" action="https://formspree.io/f/xdaqpbzq" method="POST">
               <input type="text" name="name" placeholder="Name" required autocomplete="name">
               <input type="email" name="email" placeholder="Work email" required autocomplete="email">

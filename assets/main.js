@@ -56,7 +56,9 @@
               var sp = document.createElement('span');
               sp.className = 'cnt';
               sp.setAttribute('data-t', part);
-              sp.textContent = part.indexOf('.') > -1 ? '0.00' : '0';
+              /* keep the real number in the DOM so crawlers never index a zero;
+                 the count-up only replaces it once the band scrolls into view */
+              sp.textContent = part;
               frag.appendChild(sp);
             } else if (part) {
               frag.appendChild(document.createTextNode(part));
