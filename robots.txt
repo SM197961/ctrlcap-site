@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Personal project, not commercial content
+Disallow: /cribbage
+
+Sitemap: https://ctrlcap.co/sitemap.xml

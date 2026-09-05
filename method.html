@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Construction Draw Tracking, Rebuilt | CtrlCap Method</title>
+  <meta name="description" content="How a spreadsheet-based construction draw and fund control process was rebuilt into a structured system: reimbursement from seven days to two, manual errors eliminated, throughput doubled.">
+  <link rel="canonical" href="https://ctrlcap.co/method.html">
+
+  <link rel="icon" type="image/webp" href="/assets/cc-mark.webp">
+  <link rel="icon" type="image/png" href="/assets/cc-mark-256.png">
+
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://ctrlcap.co/method.html" />
+  <meta property="og:title" content="Construction Draw Tracking, Rebuilt | CtrlCap Method" />
+  <meta property="og:description" content="Seven days to two.  The operating rebuild behind the CtrlCap method." />
+  <meta property="og:image" content="https://ctrlcap.co/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Construction Draw Tracking, Rebuilt",
+    "description": "The operating rebuild behind the CtrlCap method: construction draw and fund control moved off spreadsheets into a structured system.",
+    "author": { "@type": "Person", "name": "Spencer Medrano", "@id": "https://ctrlcap.co/founder.html#person" },
+    "publisher": { "@type": "Organization", "name": "CtrlCap", "@id": "https://ctrlcap.co/#org" },
+    "mainEntityOfPage": "https://ctrlcap.co/method.html"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site">
+    <div class="site-bar">
+      <a class="brand" href="/" aria-label="CtrlCap home">
+        <img src="/assets/cc-mark.webp" alt="" width="30" height="30">
+        <span>CtrlCap</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="/#what" class="nav-hide">Services</a>
+        <a href="method.html">Method</a>
+        <a href="founder.html">Founder</a>
+        <a href="/#pricing" class="nav-hide">Pricing</a>
+        <a href="/#contact" class="nav-cta">Get in touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="page-head">
+      <div class="wrap">
+        <span class="kicker">Where the method comes from</span>
+        <h1>Seven days to two.</h1>
+        <p class="lede">
+          The construction draw and fund control rebuild that CtrlCap's method is built on.
+          This work was done in my own operating role, on portfolios I was accountable for.
+        </p>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <div class="wrap">
+        <div class="prose">
+          <div class="pull">
+            <p>This is not a client case study.  It is the work I did in the seat, and it is the reason I am comfortable selling a fixed 90-day scope.</p>
+          </div>
+          <p>
+            Plenty of consultants can show you a client logo.  This page shows the process instead, because
+            that is the honest version and because it is the part a competitor cannot copy.  Every number
+            below comes from operations I ran.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="prose">
+
+          <h2>What the process looked like</h2>
+          <p>
+            Construction draws on a rehab portfolio move through more hands than people outside lending
+            expect.  A borrower submits a request.  Someone checks it against the approved budget.  An
+            inspection gets ordered and comes back.  Fund control validates the work in place, applies
+            retainage, and approves a disbursement amount.  Accounting funds it.  Somewhere in there, the
+            borrower calls to ask where their money is.
+          </p>
+          <p>
+            All of that lived in spreadsheets.  One workbook per portfolio, tabs per property, formulas
+            layered by whoever touched it last.  The status of any given draw existed in exactly one place:
+            the head of the person handling it.
+          </p>
+          <p>
+            The failure mode was not dramatic.  Nothing exploded.  Reimbursements just took about seven days,
+            reconciliation errors showed up in the numbers often enough to be normal, and every question
+            about a draw's status generated an email.
+          </p>
+
+          <figure style="margin:38px 0;">
+            <img src="/assets/case-context.jpeg" alt="Spreadsheet-based construction draw tracking before the rebuild" width="1200" height="750" loading="lazy" style="border-radius:5px; border:1px solid var(--line);">
+            <figcaption class="small" style="margin-top:12px;">The starting point: draw tracking held together by tabs and formulas.</figcaption>
+          </figure>
+
+          <h2>What I changed</h2>
+          <p>
+            The instinct in this situation is to build a better spreadsheet.  That is the trap.  A better
+            spreadsheet still puts the state of the process in a document instead of a system, and it still
+            depends on a person remembering to update it.
+          </p>
+          <p>
+            The fix was to give every draw an identity and a lifecycle.  One record per draw, moving through
+            defined stages, each with an owner and a clock.  Specifically:
+          </p>
+          <ul>
+            <li><strong>Structured records replaced tabs.</strong>  A draw became an object with a budget line, an inspection status, an approval state, and a disbursement amount, not a row that meant something different in each workbook.</li>
+            <li><strong>Approval routing replaced email.</strong>  When a draw cleared inspection it moved to fund control automatically.  When fund control approved it, accounting saw it without being told.</li>
+            <li><strong>Retainage and holdback logic moved into the system.</strong>  The calculation stopped being a formula one person maintained and became a rule the process enforced.</li>
+            <li><strong>Aging became visible.</strong>  Any draw sitting past the service standard surfaced on its own instead of waiting for someone to notice.</li>
+            <li><strong>Reconciliation stopped being manual.</strong>  Because the numbers were captured once at the point of approval, there was nothing left to rekey, and therefore nothing left to mistype.</li>
+          </ul>
+
+          <figure style="margin:38px 0;">
+            <img src="/assets/case-solution.jpeg" alt="Structured draw management board with approval routing after the rebuild" width="1200" height="750" loading="lazy" style="border-radius:5px; border:1px solid var(--line);">
+            <figcaption class="small" style="margin-top:12px;">After: one record per draw, with stage, owner, and age visible to everyone.</figcaption>
+          </figure>
+
+          <h2>What it produced</h2>
+
+          <table class="results">
+            <thead>
+              <tr>
+                <th scope="col">Measure</th>
+                <th scope="col">Before</th>
+                <th scope="col">After</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Draw reimbursement cycle</td>
+                <td>7 days</td>
+                <td class="after">2 days</td>
+              </tr>
+              <tr>
+                <td>Manual reconciliation errors</td>
+                <td>Recurring</td>
+                <td class="after">Eliminated</td>
+              </tr>
+              <tr>
+                <td>Fund control throughput</td>
+                <td>Baseline</td>
+                <td class="after">Doubled</td>
+              </tr>
+              <tr>
+                <td>Draw status visibility</td>
+                <td>Ask the person handling it</td>
+                <td class="after">Visible to everyone, live</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            The seven-to-two number is the one borrowers felt.  The throughput number is the one the
+            business felt, because the same fund control team could carry twice the draw volume without
+            adding a person.  The error number mattered most, since a reconciliation error in fund control
+            is not a typo, it is money moving incorrectly.
+          </p>
+
+          <div class="pull">
+            <p>Nobody was made to work faster.  The waiting, the rekeying, and the asking were removed.</p>
+          </div>
+
+          <h2>Why this is the method</h2>
+          <p>
+            Everything CtrlCap sells is this rebuild, generalized and delivered on Monday.com.  The stages
+            change depending on whether the work is draws, pipeline, or servicing exceptions.  The shape
+            does not:
+          </p>
+          <ol>
+            <li>Map the process as it actually runs, including the exceptions nobody wrote down.</li>
+            <li>Give every unit of work an identity, an owner, and a clock.</li>
+            <li>Move the rules out of people's heads and into the system.</li>
+            <li>Make aging and status visible so problems surface before they escalate.</li>
+            <li>Train the team to change it themselves, then leave.</li>
+          </ol>
+          <p>
+            That last step is the one most consultants skip, because a client who cannot maintain their own
+            system is a client who keeps paying.  Better that you stop needing the help and tell someone why.
+          </p>
+
+          <h2>What this would look like for you</h2>
+          <p>
+            If your draw log is a spreadsheet, your pipeline status is a Friday email, or your investor
+            reporting is a quarterly rebuild, the starting point is the same conversation: what does the
+            process actually do today, including the parts that only work because a specific person is
+            paying attention.
+          </p>
+          <p>
+            Engagements start at $15,000 and run a fixed 90 days.  Discovery can be scoped separately if you
+            want to start smaller, and you keep the process map either way.
+          </p>
+
+          <div class="btn-row" style="margin-top:38px;">
+            <a class="btn btn-primary" href="/#contact">Start a conversation</a>
+            <a class="btn btn-ghost" href="founder.html">About Spencer</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div class="foot-col foot-brand">
+          <a class="brand" href="/" style="margin-bottom:18px;">
+            <img src="/assets/cc-mark.webp" alt="" width="30" height="30">
+            <span>CtrlCap</span>
+          </a>
+          <p>Monday.com systems for private lenders, debt funds, and real estate investment firms.  Founded 2025.  Phoenix, AZ.</p>
+          <span class="foot-badge">
+            <img src="/assets/monday-partner-horizontal.png" alt="Monday.com Certified Partner" width="168" height="40" loading="lazy">
+          </span>
+        </div>
+        <div class="foot-col">
+          <h4>Practice</h4>
+          <a href="/#what">Services</a>
+          <a href="method.html">Method</a>
+          <a href="/#pricing">Pricing</a>
+          <a href="/#faq">FAQ</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="founder.html">Founder</a>
+          <a href="mailto:sm@ctrlcap.co">sm@ctrlcap.co</a>
+          <a href="https://www.linkedin.com/in/spencer-medrano" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/SM197961" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="foot-base">
+        <span>&copy; <span id="year">2026</span> CtrlCap LLC.  All rights reserved.</span>
+        <span>
+          <a href="privacy.html">Privacy</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/main.js" defer></script>
+</body>
+</html>

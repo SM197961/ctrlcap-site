@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 140" role="img" aria-label="CtrlCap icon">
+  <defs>
+    <linearGradient id="gradHexIcon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2f6fec"/>
+      <stop offset="100%" stop-color="#f59f0b"/>
+    </linearGradient>
+  </defs>
+  <polygon points="70,0 130,35 130,105 70,140 10,105 10,35" fill="url(#gradHexIcon)" />
+  <path d="M95 40H55a20 20 0 0 0 0 40h40" fill="none" stroke="#fff" stroke-width="10"/>
+  <path d="M110 55H70a10 10 0 0 0 0 20h40" fill="none" stroke="#fff" stroke-width="10" opacity=".95"/>
+</svg>
