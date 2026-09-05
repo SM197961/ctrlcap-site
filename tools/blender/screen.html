@@ -1,0 +1,46 @@
+<!doctype html><meta charset="utf-8">
+<style>
+  html,body{margin:0;width:1800px;height:1125px;background:#0a0f1e;color:#e8eefc;font-family:-apple-system,"Inter",Helvetica,Arial,sans-serif;overflow:hidden}
+  .top{height:84px;display:flex;align-items:center;justify-content:space-between;padding:0 44px;border-bottom:1px solid rgba(255,255,255,.08);background:#0d1327}
+  .brand{display:flex;align-items:center;gap:14px;font-weight:700;font-size:22px;letter-spacing:.02em}
+  .brand i{width:14px;height:14px;border-radius:50%;background:#f5a623;box-shadow:0 0 18px #f5a623}
+  .tabs{display:flex;gap:34px;font-size:18px;color:#8d9ab8}.tabs b{color:#fff;font-weight:600;border-bottom:2px solid #5fd0ff;padding-bottom:6px}
+  .grid{display:grid;grid-template-columns:1.35fr 1fr;gap:28px;padding:36px 44px;align-items:stretch}
+  .card{background:#111935;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:30px 34px}
+  .card h2{margin:0 0 6px;font-size:26px;font-weight:600}.card small{color:#8d9ab8;font-size:16px}
+  .kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+  .kpi{background:#0d1327;border-radius:14px;padding:22px 24px}
+  .kpi span{display:block;color:#8d9ab8;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+  .kpi b{display:block;font-size:44px;font-weight:700;margin-top:8px}.kpi b.a{color:#f5a623}.kpi b.c{color:#5fd0ff}
+  .chart{display:flex;align-items:flex-end;gap:26px;height:760px;margin-top:40px;padding:0 10px 40px;border-bottom:1px solid rgba(255,255,255,.1);position:relative}
+  .bar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+  .bar i{width:100%;border-radius:10px 10px 4px 4px;background:linear-gradient(180deg,#5fd0ff,#2a86c9);box-shadow:0 0 30px rgba(95,208,255,.25)}
+  .bar.a i{background:linear-gradient(180deg,#ffc45c,#f5a623);box-shadow:0 0 32px rgba(245,166,35,.35)}
+  .bar em{font-style:normal;font-size:17px;margin-bottom:10px;color:#e8eefc}
+  .bar u{text-decoration:none;position:absolute;bottom:-32px;font-size:14px;color:#8d9ab8}
+  .rows{margin-top:24px;display:flex;flex-direction:column;gap:14px}
+  .row{display:grid;grid-template-columns:1.6fr .9fr 1.1fr .7fr;align-items:center;white-space:nowrap;background:#0d1327;border-radius:12px;padding:20px 18px;font-size:16px}
+  .row s{text-decoration:none;color:#8d9ab8}.row .st{justify-self:end;padding:6px 14px;border-radius:999px;font-size:14px;font-weight:600}
+  .ok{background:rgba(52,199,123,.18);color:#5be0a0}.wa{background:rgba(245,166,35,.2);color:#ffc45c}.rv{background:rgba(95,208,255,.18);color:#8fe0ff}
+</style>
+<div class="top"><div class="brand"><i></i>CtrlCap · Draw Control</div><div class="tabs"><b>Draws</b><span>Inspections</span><span>Funding</span><span>Reports</span></div></div>
+<div class="grid">
+  <div class="card">
+    <h2>Average days to completion</h2><small>Draw request → funds released, by month</small>
+    <div class="chart" id="c"></div>
+  </div>
+  <div>
+    <div class="card"><h2>This week</h2><small>Portfolio · 214 active loans</small>
+      <div class="kpis"><div class="kpi"><span>Open draws</span><b>38</b></div><div class="kpi"><span>Avg days</span><b class="a">2.1</b></div><div class="kpi"><span>Errors</span><b class="c">0</b></div></div>
+    </div>
+    <div class="card" style="margin-top:28px"><h2>Queue</h2><small>Next to fund</small>
+      <div class="rows" id="r"></div>
+    </div>
+  </div>
+</div>
+<script>
+const d=[["Oct",6.6],["Nov",7.4],["Dec",7.8],["Jan",6.5],["Feb",5.9],["Mar",5.2],["Apr",5.5],["May",6.7],["Jun",7.2],["Jul",7.7],["Aug",7.1],["Sep",3.4],["Oct",2.3],["Nov",2.1]];
+document.getElementById('c').innerHTML=d.map(([m,v],i)=>`<div class="bar ${i>10?'a':''}" style="position:relative"><em>${v.toFixed(1)}</em><i style="height:${v/8.5*100}%"></i><u>${m}</u></div>`).join('');
+const q=[["Ridgeline Lofts · D6","$412,900","Inspected","ok","Ready"],["Harbor Pointe · D3","$188,250","In review","rv","Review"],["Mesa Verde 12 · D9","$96,400","Lien waiver","wa","Hold"],["Copper Creek · D2","$540,000","Inspected","ok","Ready"],["Elm & 5th · D4","$74,120","Inspected","ok","Ready"]];
+document.getElementById('r').innerHTML=q.map(x=>`<div class="row"><b>${x[0]}</b><s>${x[1]}</s><s>${x[2]}</s><span class="st ${x[3]}">${x[4]}</span></div>`).join('');
+</script>

@@ -4,6 +4,31 @@
 
   document.addEventListener('DOMContentLoaded', function () {
 
+    /* ---- Ambient rendered loops: desktop only, load on demand ---- */
+    (function () {
+      var ok = window.matchMedia('(min-width: 961px)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var vids = document.querySelectorAll('video.ambient');
+      if (!ok || !vids.length || !('IntersectionObserver' in window)) return;
+      var aio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          var v = e.target;
+          if (e.isIntersecting) {
+            if (!v.getAttribute('src')) {
+              var webm = v.getAttribute('data-webm');
+              var mp4 = v.getAttribute('data-src');
+              v.src = (webm && v.canPlayType('video/webm; codecs="vp9"')) ? webm : mp4;
+              /* if the WebM is missing or refused, fall back to the MP4 once */
+              v.addEventListener('error', function () {
+                if (mp4 && v.getAttribute('src') !== mp4) { v.src = mp4; v.play().catch(function () {}); }
+              });
+            }
+            v.play().then(function () { v.classList.add('on'); }).catch(function () {});
+          } else { v.pause(); }
+        });
+      }, { rootMargin: '200px 0px' });
+      vids.forEach(function (v) { aio.observe(v); });
+    })();
+
     /* ---- Footer year ---- */
     var yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
