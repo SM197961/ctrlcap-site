@@ -643,3 +643,17 @@ nav.site-nav a:not(.nav-cta):hover::after { width: 100%; }
 }
 @keyframes tick { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+
+
+/* ---------- Easter egg: Lucy ---------- */
+.foot-base > span:first-child { user-select: none; -webkit-user-select: none; }
+.lucy-modal {
+  display: none; position: fixed; inset: 0; z-index: 2100;
+  background: rgba(5,7,12,0.94); align-items: center; justify-content: center; padding: 24px;
+}
+.lucy-modal.open { display: flex; }
+.lucy-card { max-width: min(900px, 100%); text-align: center; animation: lucyIn .35s cubic-bezier(.2,.8,.2,1) both; }
+.lucy-card img { width: 100%; height: auto; border-radius: 10px; box-shadow: 0 30px 60px -20px rgba(0,0,0,.9); }
+.lucy-card p { margin: 14px 0 0; color: #cfc9bd; font-size: 15px; letter-spacing: .02em; }
+.lucy-card p b { color: #f5c842; }
+@keyframes lucyIn { from { transform: translateY(24px) scale(.96); opacity: 0; } to { transform: none; opacity: 1; } }

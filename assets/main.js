@@ -132,6 +132,32 @@
       if (e.key === 'Escape' && modal && modal.classList.contains('open')) closeVideo();
     });
 
+
+    /* ---- Easter egg: Lucy ----
+       Three quick clicks on the copyright line in the footer. */
+    var copy = document.querySelector('.foot-base > span:first-child');
+    if (copy) {
+      var taps = 0, tapTimer = null;
+      copy.addEventListener('click', function () {
+        taps += 1;
+        clearTimeout(tapTimer);
+        tapTimer = setTimeout(function () { taps = 0; }, 900);
+        if (taps < 3) return;
+        taps = 0;
+        var m = document.getElementById('lucy-modal');
+        if (!m) {
+          m = document.createElement('div');
+          m.id = 'lucy-modal';
+          m.className = 'lucy-modal';
+          m.innerHTML = '<div class="lucy-card"><img src="/assets/lucy.jpg" alt="Lucy the dog in a pumpkin shirt"><p><b>Lucy.</b> Chief Morale Officer. Every operator needs a hobby; she is mine.</p></div>';
+          m.addEventListener('click', function () { m.classList.remove('open'); });
+          document.addEventListener('keydown', function (e) { if (e.key === 'Escape') m.classList.remove('open'); });
+          document.body.appendChild(m);
+        }
+        m.classList.add('open');
+      });
+    }
+
     /* ---- Contact form ----
        Posts to the endpoint in the form's action attribute.
        On any failure it falls back to a mailto so a lead is never lost. */
