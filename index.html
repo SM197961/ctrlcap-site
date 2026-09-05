@@ -123,6 +123,7 @@
 
     <!-- ============ HERO ============ -->
     <section class="hero">
+      <div class="hero-scene" id="hero-scene" aria-hidden="true"></div>
       <div class="wrap">
         <div class="hero-copy">
           <span class="kicker">Monday.com systems for private lenders</span>
@@ -379,6 +380,7 @@
         </div>
 
         <div class="phases">
+          <div class="phases-rail" aria-hidden="true"></div>
           <div class="phase">
             <div class="phase-when">Weeks 1&ndash;2</div>
             <h3>Discovery</h3>
@@ -576,7 +578,10 @@
       <source src="/assets/908.mp4" type="video/mp4">
     </video>
   </div>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="assets/motion.js" defer></script>
   <script src="assets/main.js" defer></script>
+  <script type="module" src="assets/scene.js"></script>
 </body>
 </html>

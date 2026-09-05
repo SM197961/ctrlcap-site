@@ -25,6 +25,8 @@
     var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (!reduceMotion && 'IntersectionObserver' in window) {
+      /* GSAP (motion.js) owns the reveals when it loaded; this is the fallback. */
+      if (!window.gsap) {
       /* tag reveal targets, stagger siblings within their group */
       ['.sec-head', '.problem', '.service', '.pull', '.price-panel', '.card',
        '.phase', '.int-tile', '.stat', '.media-feature', '.faq-item'].forEach(function (sel) {
@@ -45,6 +47,7 @@
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
       document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+      }
 
       /* counters: wrap digit runs inside .stat-num text nodes, count up on reveal */
       document.querySelectorAll('.stat-num').forEach(function (num) {
