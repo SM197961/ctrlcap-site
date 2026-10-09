@@ -46,12 +46,12 @@ function init() {
   // The DOM board sits in the right half; nodes ring around it, the core sits behind it.
   const amber = 0xf5a623, cyan = 0x5fd0ff;
   const nodes = [
-    { name: 'Monday.com',          pos: [4.6,  0.2, -2.2], color: amber, r: 0.55, core: true },
-    { name: 'Salesforce',          pos: [0.9,  3.5, -1.0], color: cyan,  r: 0.16 },
-    { name: 'Snowflake',           pos: [8.3,  3.6, -1.6], color: cyan,  r: 0.16 },
-    { name: 'The Mortgage Office', pos: [7.2, -4.6, -0.8], color: cyan,  r: 0.16 },
-    { name: 'Your CRM',            pos: [1.1, -3.9, -1.4], color: cyan,  r: 0.16 },
-    { name: 'QuickBooks',          pos: [-7.2, 4.1, -3.4], color: cyan,  r: 0.13 },
+    { name: 'Your portfolio',      pos: [4.6,  0.2, -2.2], color: amber, r: 0.55, core: true },
+    { name: 'Workouts',            pos: [0.9,  3.5, -1.0], color: cyan,  r: 0.16 },
+    { name: 'Servicing',           pos: [8.3,  3.6, -1.6], color: cyan,  r: 0.16 },
+    { name: 'Investor reporting',  pos: [7.2, -4.6, -0.8], color: cyan,  r: 0.16 },
+    { name: 'Borrower contact',    pos: [1.1, -3.9, -1.4], color: cyan,  r: 0.16 },
+    { name: 'Counsel and trustees',pos: [-7.2, 4.1, -3.4], color: cyan,  r: 0.13 },
   ];
 
   const texSoft = glowTexture('rgba(255,255,255,0.95)', 'rgba(255,255,255,0.18)');

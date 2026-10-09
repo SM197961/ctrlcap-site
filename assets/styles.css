@@ -278,18 +278,18 @@ nav.site-nav a.nav-cta:hover { color: var(--navy); box-shadow: inset 0 1px 0 rgb
   50%,  74% { background: rgba(74,222,128,0.14); color: var(--green); border-color: rgba(74,222,128,0.35); }
   75%, 100% { background: rgba(255,255,255,0.08); color: var(--white); border-color: rgba(255,255,255,0.2); }
 }
-.board-row.runner .pill::before { content: 'Inspection'; animation: pillText 12s steps(1, end) infinite; }
+.board-row.runner .pill::before { content: 'Notice sent'; animation: pillText 12s steps(1, end) infinite; }
 @keyframes pillText {
-  0%,   24% { content: 'Inspection'; }
-  25%,  49% { content: 'Fund control'; }
-  50%,  74% { content: 'Approved'; }
-  75%, 100% { content: 'Disbursed'; }
+  0%,   24% { content: 'Notice sent'; }
+  25%,  49% { content: 'Borrower call'; }
+  50%,  74% { content: 'Terms agreed'; }
+  75%, 100% { content: 'Cured'; }
 }
-.board-row.runner .age::before { content: '3d'; animation: ageText 12s steps(1, end) infinite; }
+.board-row.runner .age::before { content: '38'; animation: ageText 12s steps(1, end) infinite; }
 @keyframes ageText {
-  0%,   24% { content: '3d'; }
-  25%,  49% { content: '1d'; }
-  50%,  74% { content: '2h'; }
+  0%,   24% { content: '38'; }
+  25%,  49% { content: '41'; }
+  50%,  74% { content: '47'; }
   75%, 100% { content: '\2713'; }
 }
 @keyframes ageCycle {
@@ -313,11 +313,11 @@ nav.site-nav a.nav-cta:hover { color: var(--navy); box-shadow: inset 0 1px 0 rgb
   animation: toast 12s ease-in-out infinite;
 }
 .board-toast i { width: 8px; height: 8px; border-radius: 50%; background: var(--gold); box-shadow: 0 0 10px var(--gold-glow); flex-shrink: 0; }
-.board-toast::before { content: 'Automation: inspection passed \2192 routed to fund control'; animation: toastText 12s steps(1, end) infinite; }
+.board-toast::before { content: 'File note: borrower reached, forbearance terms sent to counsel'; animation: toastText 12s steps(1, end) infinite; }
 @keyframes toastText {
-  0%,  49% { content: 'Automation: inspection passed \2192 routed to fund control'; }
-  50%, 74% { content: 'Automation: approval logged \2192 disbursement queued'; }
-  75%, 100% { content: 'Automation: wire confirmed \2192 borrower notified'; }
+  0%,  49% { content: 'File note: borrower reached, forbearance terms sent to counsel'; }
+  50%, 74% { content: 'File note: terms signed, investor report updated'; }
+  75%, 100% { content: 'File note: loan reinstated, moved off the watch list'; }
 }
 @keyframes toast {
   0%, 24% { opacity: 0; transform: translateY(10px); }
